@@ -1,0 +1,364 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Finlance - Financial Planning HTML Template</title>
+   <!-- CSS only -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+   <!-- JavaScript Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+   </script>
+   <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+   <!-- fontawesome css -->
+   <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+   <!-- flaticon css -->
+   <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+   <!-- owl carousel css -->
+   <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+   <!-- owl carousel theme css -->
+   <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+   <!-- slicknav css -->
+   <link rel="stylesheet" href="{% static 'css/slicknav.css'%}">
+   <!-- main css -->
+   <link rel="stylesheet" href="{% static 'css/style.css'%}">
+   <!-- responsive css -->
+   <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+   <!-- jquery js -->
+   <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+</head>
+
+
+<body>
+   <!--   header area start   -->
+   <div class="header-area header-absolute">
+      <div class="container">
+         <div class="support-bar-area">
+            <div class="row">
+               <div class="col-lg-6 support-contact-info">
+                  <span class="address"><i class="flaticon-placeholder"></i>Абдумомунова 220А</span>
+                  <span class="phone"><i class="flaticon-chat"></i>+996 708 899 889</span>
+               </div>
+               <div class="col-lg-6 text-right">
+                  <ul class="social-links">
+                     <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+                  <div class="language">
+                     <a class="language-btn" href="{% url 'contact_ru' %}"><i class="flaticon-worldwide"></i>
+                        Русский</a>
+                     <ul class="language-dropdown">
+                        <li><a href="{% url 'contact' %}">English</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="header-navbar">
+            <div class="row">
+               <div class="col-lg-2 col-6">
+                  <div class="logo-wrapper">
+                     <a href="{% url 'home_ru' %}"><img src="../static/NewImage/Logo_invest.png" alt=""></a>
+                  </div>
+               </div>
+               <div class="col-lg-10 col-6 text-right position-static">
+                  <ul class="main-menu" id="mainMenu">
+                     <li class="active">
+                        <a class="dropdown-btn" href="#">Главная</a>
+                     </li>
+                     <li><a href="{% url 'about_ru' %}">О компании</a></li>
+                     <li class="dropdown">
+                        <a class="dropdown-btn" href="{% url 'all_ru' %}">Проекты</a>
+                        <ul class="dropdown-lists ">
+                           {% comment %} <li><a href="{% url 'all_ru' %}">Все проекты</a></li> {% endcomment %}
+                           <li><a href="{% url 'production_ru' %}">Производство</a></li>
+                           <li><a href="{% url 'IT_ru' %}">It</a></li>
+                           <li><a href="{% url 'commerce_ru' %}">Коммерция</a></li>
+                           <li><a href="{% url 'energy_ru' %}">Энергетика</a></li>
+                           <li><a href="{% url 'place_ru' %}">месторождения</a></li>
+                        </ul>
+                     </li>
+                     <li><a href="{% url 'contact_ru' %}">Контакты</a></li>
+                     <li><a href="{% url 'services_ru' %}" class="boxed-btn">Связатся с нами</a></li>
+                  </ul>
+                  <div id="mobileMenu"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--   header area end   -->
+
+
+   <!--   hero area start   -->
+   <div class="breadcrumb-area contact contact-bg">
+      <div class="container">
+         <div class="breadcrumb-txt">
+            <div class="row">
+               <div class="col-xl-7 col-lg-8 col-sm-10">
+                  <span>Свяжитесь с нами</span>
+                  <h1>Нужна информация? свяжитесь с нами</h1>
+                  <ul class="breadcumb">
+                     <li><a href="{% url 'home_ru' %}">Главная</a></li>
+                     <li>Связаться с нами</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="breadcrumb-area-overlay"></div>
+   </div>
+   <!--   hero area end    -->
+
+
+   <!--    contact form and map start   -->
+   <div class="contact-form-section">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-6">
+               <span class="section-title">Свяжитесь с нами</span>
+               <h2 class="section-summary">Нужна информация, заполните форму и отправьте нам</h2>
+               <form action="contact.html" class="contact-form">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="form-element">
+                           <input name="name" type="text" placeholder="Name">
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-element">
+                           <input name="email" type="text" placeholder="Email">
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-element">
+                           <input name="phone" type="text" placeholder="Phone">
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-element">
+                           <input name="subject" type="text" placeholder="Subject">
+                        </div>
+                     </div>
+                     <div class="col-md-12">
+                        <div class="form-element reduced-mb">
+                           <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Comment"></textarea>
+                        </div>
+                     </div>
+                     <div class="col-md-12">
+                        <div class="form-element no-margin">
+                           <input type="submit" value="Submit">
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <div class="col-lg-6">
+               <div class="map-wrapper">
+                  <div id="map"></div>
+                  <div class="contact-infos">
+                     <div class="single-contact-info">
+                        <div class="icon-wrapper">
+                           <i class="fa fa-home"></i>
+                        </div>
+                        <p>Абдумомунова 220а Бишкек, Кыргызстан </p>
+                     </div>
+                     <div class="single-contact-info">
+                        <div class="icon-wrapper">
+                           <i class="fa fa-phone"></i>
+                        </div>
+                        <p>+996 708 899 889</p>
+                     </div>
+                     <div class="single-contact-info">
+                        <div class="icon-wrapper">
+                           <i class="fa fa-envelope"></i>
+                        </div>
+                        <p>info@invest.com</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--    contact form and map end   -->
+
+
+   <!--    call to action section start    -->
+   <div class="cta-section cta-bg">
+      <div class="container">
+         <div class="cta-content">
+            <div class="row">
+               <div class="col-md-9 col-lg-7">
+                  <h3>Свяжитесь с нами, если вам нужна помощь с вашими финансами.</h3>
+               </div>
+               <div class="col-md-5 contact-btn-wrapper">
+                  <a href="{% url 'contact_ru' %}" class="boxed-btn contact-btn"><span>Связаться с нами</span></a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="cta-overlay"></div>
+   </div>
+   <!--    call to action section end    -->
+
+
+   <!--   partner section start    -->
+   <div class="partner-section">
+      <div class="container top-border">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="partner-carousel owl-carousel owl-theme">
+                  <div class="single-partner-item">
+                     <div class="outer-container">
+                        <div class="inner-container">
+                           <img src="assets/img/partners/partner-1.png" alt="">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="single-partner-item">
+                     <div class="outer-container">
+                        <div class="inner-container">
+                           <img src="assets/img/partners/partner-2.png" alt="">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="single-partner-item">
+                     <div class="outer-container">
+                        <div class="inner-container">
+                           <img src="assets/img/partners/partner-3.png" alt="">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="single-partner-item">
+                     <div class="outer-container">
+                        <div class="inner-container">
+                           <img src="assets/img/partners/partner-4.png" alt="">
+                        </div>
+                     </div>
+                  </div>
+                  <div class="single-partner-item">
+                     <div class="outer-container">
+                        <div class="inner-container">
+                           <img src="assets/img/partners/partner-5.png" alt="">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!--   partner section end    -->
+
+
+   <!--    footer section start   -->
+   <footer class="footer-section">
+      <div class="container">
+         <div class="top-footer-section">
+            <div class="row">
+               <div class="col-lg-5 col-md-12">
+                  <div class="footer-logo-wrapper">
+                     <a href="{% url 'home_ru' %}">
+                        <img src="assets/img/logo.png" alt="">
+                     </a>
+                  </div>
+                  <p class="footer-txt">Вся наша деятельность сосредоточена на вас и ваших целях. Финансовое
+                     планирование — это не деньги, а поиск способов помочь вам достичь своих целей посредством
+                     тщательного и вдумчивого планирования и исполнения.</p>
+               </div>
+               <div class="col-lg-2 col-md-3">
+                  <h4>Полезные ссылки</h4>
+                  <ul class="footer-links">
+                     <li><a href="{% url 'home_ru' %}">Главная</a></li>
+                     <li><a href="{% url 'about_ru' %}">О нас</a></li>
+                     <li><a href="{% url 'services_ru' %}">Сервис</a></li>
+                     <li><a href="{% url 'blogs_ru' %}">Блог</a></li>
+                     <li><a href="{% url 'contact_ru' %}">Контакты</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-2 col-md-3">
+                  <h4>Решения</h4>
+                  <ul class="footer-links">
+                     <li><a href="#">Инвестирование</a></li>
+                     <li><a href="#">Налоги и бизнес</a></li>
+                     <li><a href="#">Управление рисками</a></li>
+                     <li><a href="#">Финансы</a></li>
+                     <li><a href="#">Жизнь и страхование</a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-3 col-md-6">
+                  <h4>Контакты</h4>
+                  <div class="footer-contact-info">
+                     <ul>
+                        <li><i class="fa fa-home"></i><span>Абдумомунова 220а</span>
+                        </li>
+                        <li><i class="fa fa-phone"></i><span>+996 708 899 889</span></li>
+                        <li><i class="far fa-envelope"></i><span>info@invest.com</span></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="copyright-section">
+            <div class="row">
+               <div class="col-sm-7">
+                  <p class="text-left">© Copyrights 2022 Финансы. Все права защищены.</p>
+               </div>
+               <div class="col-sm-5">
+                  <p class="text-right">Разработано <strong>Zerosoft</strong></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!--    footer section end   -->
+
+
+   <!-- preloader section start -->
+   <div class="loader-container">
+      <span class="loader">
+         <span class="loader-inner"></span>
+      </span>
+   </div>
+   <!-- preloader section end -->
+
+
+   <!-- back to top area start -->
+   <div class="back-to-top">
+      <i class="fas fa-chevron-up"></i>
+   </div>
+   <!-- back to top area end -->
+
+
+   <!-- popper js -->
+   <script src="{% static 'js/popper.min.js' %}"></script>
+   <!-- bootstrap js -->
+   <script src="{% static 'js/bootstrap.min.js' %}"></script>
+   <!-- owl carousel js -->
+   <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+   <!-- slicknav js -->
+   <script src="{% static 'js/jquery.slicknav.min.js'%}"></script>
+   <!-- isotope js -->
+   <script src="{% static 'js/isotope.pkgd.min.js'%}"></script>
+   <!-- particle js -->
+   <script src="{% static 'js/particles.min.js'%}"></script>
+   <!-- jquery ripples js -->
+   <script src="{% static 'js/jquery.ripples-min.js'%}"></script>
+   <!-- ytplayer js -->
+   <script src="{% static 'js/YTPlayer.min.js'%}"></script>
+   <!-- parallax js -->
+   <script src="{% static 'js/parallax.min.js'%}"></script>
+   <!-- main js -->
+   <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

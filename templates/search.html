@@ -1,0 +1,8 @@
+{% if post %}
+<center><h1>Search result Found</h1><center>
+    <br>
+
+    {% for project in post %}
+    <center><h2> <a>{{project.title}},{{project.body}}</a></center>
+
+{% endif %}
