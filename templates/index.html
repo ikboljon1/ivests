@@ -73,11 +73,10 @@
 
                    <i class="searchIcon fi-rr-search">  <input type="text" class="ml-auto searchItem" placeholder="Search..."></i>
                   </div> -->
-        <form class="d-flex" method=GET action="{% url 'all' %}">
-          {% csrf_token %}
+          <form method=GET action="{% url "home" %}">
           <div class="input-group col-lg-4 searchBar">
             <div class="form-outline">
-              <input id="search-focus" type="search" id="form1" class="" placeholder="Search..." name="q" value="{{q}}"/>
+              <input id="search-focus" type="search" id="form1" class="" placeholder="Search..." name="search" />
             </div>
             <button type="button" class="ml-3">
               <i class="fi-rr-search text-right"></i>
@@ -85,7 +84,7 @@
             <button type="button" class="ml-2" data-bs-toggle="modal" data-bs-target="#exampleModalFilter">
               <i class="fi-rr-settings-sliders"></i>
           </div>
-        </from>
+        </form>
         </div>
 
       </div>
@@ -688,6 +687,9 @@
   </div>
 
   <!--    team section end   -->
+  {% for i in projects %}
+  <p>{{i.title}}</p>
+  {% endfor %}
 
   <!--    blog section start   -->
   <div class="blog-section section-padding">
