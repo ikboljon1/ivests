@@ -3,17 +3,18 @@ from django.views.generic import ListView
 from .models import Addproject
 
 # Create your views here.
-
 class AddprojectListView(ListView):
     model = Addproject
     template_name = 'index.html'
-
-def search(request):
-     search = request.Get.get('q','')
-     if post and post != '':
-          post = Addproject.objects.filter(title=search).all()
-
-     return render(request, 'allProject.html',{'q':search,'post':post})
+    context_object_name = "projects"
+    
+    def get_queryset(self):
+         queryset = Addproject.objects.all()
+         search = self.request.GET.get('search')
+         if search =="":
+              queryset = Addproject.objects.filter(Q(title__icontains=search) | Q(body__icontains=search))
+         print(search)
+         return queryset
 
 def blogs(request):
      return render(request, 'blogs.html')
